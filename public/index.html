@@ -23,6 +23,11 @@
         <h5>Please enter your currecy in Euros and select your desired currency:</h5>
         <label for="euros">Enter Euros:</label>
         <input id="euros" v-model.number='euros' type="number">
+        <select id="desired-currency" v-model="desiredCurrency">
+          <option disabled value="">Select a currency</option>
+          <option v-for="(key,rate) in currencies" :value="rate">{{rate}}</option>
+          </select>
+        <h5> Would be converted to : {{convertedValue}}</h5> 
 
       </section>
 

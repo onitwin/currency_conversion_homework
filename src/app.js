@@ -7,7 +7,9 @@ document.addEventListener("DOMContentLoaded",()=>{
       title: "Currency Conversion Website",
       currentRates:"Current Exchange Rates",
       currencies:[],
-      euros:0
+      euros:0,
+      desiredCurrency:null,
+      convertedValue:0
     },
     mounted(){
       this.getRates()
