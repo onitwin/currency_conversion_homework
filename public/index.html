@@ -9,6 +9,22 @@
   <body>
     <div id="app">
       <h1>{{title}}</h1>
+      <section id="display-current-rates">
+        <h3>{{currentRates}}</h3>
+        <ul id="display-rates">
+          <li v-for="(key, rate) in currencies">
+            {{rate}} {{key}}
+          </li>
+        </ul>
+      </section>
+      <br>
+      <section>
+        <h3>Currency Conversion</h3>
+        <h5>Please enter your currecy in Euros and select your desired currency:</h5>
+        <label for="euros">Enter Euros:</label>
+        <input id="euros" v-model.number='euros' type="number">
+
+      </section>
 
 
     </div>
